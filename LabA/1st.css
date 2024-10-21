@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('fonts/Starjedi.woff') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'StarWars', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #f0eaea;
+    text-shadow: 0 0 20px rgba(250, 247, 247, 0.8);
+    letter-spacing: 4px;
+}
+
+h2 {
+    letter-spacing: 2px;
+}
+
+header {
+    height: 10vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+#hiding {
+    display: none;
+}
+#titleBody {
+    display: none;
+}
+
+#container {
+    min-height: 80vh;
+    position: relative;
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+        "head head"
+        "h1 h1"
+        "content1 content2"
+        "h3 h3"
+        "content3 content4"
+        "link link "
+        "foot foot "
+;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 400px) {
+    grid-template-columns: 1fr;
+}
+
+#container > header {
+    grid-area: head;
+}
+
+#container > .content1 {
+    grid-area: content1;
+}
+
+#container > .content2 {
+    grid-area: content2;
+}
+#container > .content3 {
+    grid-area: content3;
+}
+
+#container > .content4 {
+    grid-area: content4;
+}
+
+#container > h1 {
+    grid-area: h1;
+}
+
+#container > h3 {
+    grid-area: h3;
+}
+#container > a {
+    grid-area: link;
+}
+
+#container > footer {
+    grid-area: foot;
+}
+
+#container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(120deg, #fff, #3242c3, #ee0000, #000);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.darkColumn, .lightColumn {
+    width: 30vw;
+    padding: 20px;
+}
+
+.content3, .content4 {
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
