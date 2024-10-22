@@ -8,12 +8,33 @@
     src: url('fonts/Starjhol.woff') format('truetype');
 }
 
+header {
+    height: 10vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 10vh;
+    width: 100vw;
+    opacity: 0;
+    z-index: 2;
+}
+
+footer:hover {
+    opacity: 1;
+}
+
+
 body {
     background-image: url('images/background.jpg');
     color: yellow;
     font-family: 'StarWars', sans-serif;
     letter-spacing: 1px;
     margin: 0;
+    position: relative;
+
 }
 
 #intro {
@@ -33,24 +54,33 @@ body {
     bottom: 100%;
     width: 100%;
     letter-spacing: 1px;
-    animation-delay: 4s; /* Animacja scrollText uruchamia się po 10 sekundach */
+    animation-delay: 4s;
 }
 
-h1, h2, h3, p, ul, li, a {
+h1, h2, h3, p {
     margin: 10px 0;
     width: 50vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1;
+
 }
 
 ul, li {
     list-style-type: none;
 }
+ .heroes{
+     border-radius: 5px;
+     border: 1px solid yellow;
+ }
 
 a {
-    color: yellow;
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(245, 108, 108, 0.6);
     text-decoration: none;
+    font-size: 1.8rem;
+    z-index: 2;
 }
 
 #hiding {
@@ -63,11 +93,9 @@ a {
     animation: disappearAnimation 3s forwards;
 }
 
-#titleContent {
-    display: none;
-}
 
-#titleBody {
+
+#titleContent {
     font-family: 'StarWars2', sans-serif;
     font-size: 3rem;
     position: absolute;
@@ -75,7 +103,7 @@ a {
     left: 25%;
     opacity: 0;
     animation: showTitleBody 7s forwards;
-    animation-delay: 3s; /* Uruchomienie animacji po zakończeniu #hiding */
+    animation-delay: 3s;
 }
 
 .content3, .content4 {
@@ -117,5 +145,23 @@ a {
     }
     100% {
         font-size: 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 0.8rem;
+    }
+    body {
+        font-size: 0.5rem;
+    }
+    a {
+        font-size: 0.9rem;
     }
 }

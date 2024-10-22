@@ -26,14 +26,13 @@ header {
 
 footer {
     height: 10vh;
+    text-align: center;
 }
 
 #hiding {
     display: none;
 }
-#titleBody {
-    display: none;
-}
+
 
 #container {
     min-height: 80vh;
@@ -51,9 +50,32 @@ footer {
 ;
     grid-template-columns: 1fr 1fr;
 }
-@media (max-width: 400px) {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem; /* Zmniejsz rozmiar czcionki */
+    }
+
+    h2 {
+        font-size: 1rem; /* Zmniejsz rozmiar czcionki */
+    }
+
+    h3 {
+        font-size: 0.8rem; /* Zmniejsz rozmiar czcionki */
+    }
+
+    body {
+        font-size: 0.5rem; /* Zmniejsz ogólny rozmiar tekstu */
+    }
+
+    a {
+        font-size: 0.9rem; /* Zmniejsz rozmiar czcionki dla linków */
+    }
 }
+
 
 #container > header {
     grid-area: head;
@@ -120,7 +142,16 @@ a {
     color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
-    text-align: center;
+}
+
+.heroes{
+    border-radius: 5px;
+    border: 2px solid #ff00f2;
+}
+
+a:hover {
+    color: #4bf800;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(50, 170, 9, 0.6);
 }
 
 h2, h3 {
