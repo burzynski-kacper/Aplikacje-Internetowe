@@ -1,0 +1,89 @@
+/* Stylowanie ogólne */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Jasne tło */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    background-color: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#toDoList {
+    margin-top: 20px;
+}
+
+.singleTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.singleTask:last-child {
+    border-bottom: none;
+}
+
+.taskValue {
+    font-size: 18px;
+    color: #333;
+}
+
+.taskDateValue {
+    font-size: 14px;
+    color: #777;
+}
+
+input[type="button"] {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #c82333;
+}
+
+/* Stylowanie dodawania nowych zadań */
+#addTask {
+    margin-top: 20px;
+}
