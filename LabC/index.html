@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Maps Puzzle</title>
+        <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="leaflet-1.7.1/leaflet-src.js"></script>
+        <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+        <script src="leaflet-1.7.1/leaflet-image.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="mapContainer">
+                <div id="map"></div>
+                <canvas id="savedImage"></canvas>
+            </div>
+            
+            <div id="buttonContainer">
+                <input type="submit" id="getLocation" value="Your location">
+                <input type="submit" id="getImage" value="Save image">
+            </div>
+            <div id="resultContainer">
+                <div id="puzzleContainer"></div>
+                <div id="boardContainer"></div>
+            </div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mapContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#resultContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#map, #savedImage {
+    width: 600px;
+    height: 300px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+input {
+    width: 100px;
+    height: 40px;
+    background-color: #8379cc;
+    color: white;
+    border-radius: 12px;
+}
+
+#buttonContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#puzzleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+    width: 620px;
+}
+
+.puzzle {
+    width: 150px;
+    height: 75px;
+}
+
+#boardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+    width: 640px;
+    height: 340px;
+    flex-direction: column;
+}
+
+.board-cell {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 75px;
+}
