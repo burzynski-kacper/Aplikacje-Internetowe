@@ -22,7 +22,6 @@ class FishController
     {
         if ($requestPost) {
             $fish = Fish::fromArray($requestPost);
-            // @todo missing validation
             $fish->save();
 
             $path = $router->generatePath('fish-index');
@@ -48,7 +47,6 @@ class FishController
 
         if ($requestPost) {
             $fish->fill($requestPost);
-            // @todo missing validation
             $fish->save();
 
             $path = $router->generatePath('fish-index');
